@@ -19,6 +19,19 @@ public class GameOfLife extends Application {
     }
     public static void main(String[] args) {
         CellState[][] startBoard = getCellStates();
+        Board board = new Board(startBoard);
+
+        PrintingBoard(startBoard);
+
+        updatesBoardToNextGeneration(board);
+
+        CellState[][] secondBoard = board.getState();
+        PrintingBoard(secondBoard);
+
+        updatesBoardToNextGeneration(board);
+
+        CellState[][] thirdBoard = board.getState();
+        PrintingBoard(thirdBoard);
 
 
     }
@@ -29,6 +42,16 @@ public class GameOfLife extends Application {
                 {X, X, X, O, O, O, X, X, O, X}
         };
         return startBoard;
+    }
+    private static void PrintingBoard(CellState[][] startBoard) {
+        System.out.println(Arrays.deepToString(startBoard)
+                .replace("], ", "\n")
+                .replace("[", "")
+                .replace("]]", ""));
+    }
+    private static void updatesBoardToNextGeneration(Board board) {
+        System.out.println("NEXT GENERATION");
+        board.update();
     }
 }
 
