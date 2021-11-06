@@ -18,6 +18,7 @@ public class GameOfLife extends Application {
 
     }
     public static void main(String[] args) {
+
         CellState[][] startBoard = getCellStates();
         Board board = new Board(startBoard);
 
@@ -42,6 +43,7 @@ public class GameOfLife extends Application {
                 {X, X, X, O, O, O, X, X, O, X}
         };
         return startBoard;
+
     }
     private static void PrintingBoard(CellState[][] startBoard) {
         System.out.println(Arrays.deepToString(startBoard)
@@ -49,6 +51,7 @@ public class GameOfLife extends Application {
                 .replace("[", "")
                 .replace("]]", ""));
     }
+
     private static void updatesBoardToNextGeneration(Board board) {
         System.out.println("NEXT GENERATION");
         board.update();

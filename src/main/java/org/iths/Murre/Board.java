@@ -25,6 +25,7 @@ public class Board {
         return CellStates;
     }
 
+
     public void update() {
         CellState[][] cellStates = getState();
         for (int row = 0; row < state.length; row++) {
@@ -34,6 +35,7 @@ public class Board {
             }
         }
     }
+
 
     private int getNumberOfAliveNeighbours(CellState[][] state, int centerRow, int centerColumn) {
         int numberOfAliveNeighbours = 0;
@@ -49,6 +51,7 @@ public class Board {
         return numberOfAliveNeighbours;
     }
 
+
     private int getNumberOfAliveNeighboursInRow(CellState[][] state, int row, int centerColumn) {
         int numberOfAliveNeighbours = 0;
         int leftColumn = centerColumn - 1;
@@ -61,6 +64,7 @@ public class Board {
         }
         return numberOfAliveNeighbours;
     }
+
 
     private int getCountIfCellIsAlive(CellState[][] state, int row, int col) {
         if (col >= 0 && col < state[row].length) {

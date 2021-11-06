@@ -1,6 +1,7 @@
 package org.iths.Murre;
 
 public enum CellState {
+
     ALIVE ("X"),
     DEAD ("O");
 

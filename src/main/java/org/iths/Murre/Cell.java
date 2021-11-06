@@ -14,14 +14,17 @@ public class Cell {
             int MIN_NEIGHBOURS_TO_SURVIVE = 2;
             if (i >= MIN_NEIGHBOURS_TO_SURVIVE && i <= MAX_NEIGHBOURS_TO_SURVIVE) {
                 state = CellState.ALIVE;
-            } else {
+            }
+            else {
                 state = CellState.DEAD;
             }
-        } else {
+        }
+        else {
             int CELL_BECOMES_ALIVE_WITH_THREE_NEIGHBOURS = 3;
             if (i == CELL_BECOMES_ALIVE_WITH_THREE_NEIGHBOURS) {
                 state = CellState.ALIVE;
-            }else{
+            }
+            else{
                 state = CellState.DEAD;
             }
         }
